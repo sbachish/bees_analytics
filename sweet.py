@@ -72,8 +72,7 @@ def main():
 
     print '----------------------------------------'
     print '3. Which day was the best day for harvesting? Which one was the worst?'
-    sugar_per_day = total_sugar_per_day(harvest)
-    sugar_per_day = pd.DataFrame(sugar_per_day)
+    sugar_per_day = pd.DataFrame( total_sugar_per_day(harvest) )
     sugar_per_day.columns = ['day', 'sugar']
     sugar_per_day = sugar_per_day.sort('day')
 
