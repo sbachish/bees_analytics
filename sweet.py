@@ -7,7 +7,6 @@ def pollen_to_sugar(harvest, pollens):
     for i in range(harvest.shape[0]):
         sugar_per_mg = pollens[pollens.id==harvest.pollen_id[i]].sugar_per_mg
         harvest.miligrams_harvested[i] *= sugar_per_mg
-
     return harvest
 
 
