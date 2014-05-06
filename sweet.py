@@ -72,7 +72,6 @@ def main():
 
     print '----------------------------------------'
     print '3. Which day was the best day for harvesting? Which one was the worst?'
-    print 'Plotting...'
     sugar_per_day = total_sugar_per_day(harvest)
     sugar_per_day = pd.DataFrame(sugar_per_day)
     sugar_per_day.columns = ['day', 'sugar']
@@ -84,6 +83,7 @@ def main():
     print 'Best day', sugar_per_day.values[best_day_index]
 
     # plot sugar per day
+    print 'Plotting...'
     plt.plot(range(sugar_per_day.shape[0]), sugar_per_day.sugar, color='#1f77b4')
     plt.title('Sugar per day')
     annotation_1 ="worst day [%s]" % (sugar_per_day.values[worst_day_index][0])
