@@ -76,12 +76,10 @@ def main():
     sugar_per_day = total_sugar_per_day(harvest)
     sugar_per_day = pd.DataFrame(sugar_per_day)
     sugar_per_day.columns = ['day', 'sugar']
-
     sugar_per_day = sugar_per_day.sort('day')
 
     worst_day_index, worst_day_sugar = sugar_per_day.sugar.argmin(), sugar_per_day.sugar.min()
     best_day_index, best_day_sugar = sugar_per_day.sugar.argmax(), sugar_per_day.sugar.max()
-  
     print 'Worst day:', sugar_per_day.values[worst_day_index]
     print 'Best day', sugar_per_day.values[best_day_index]
 
