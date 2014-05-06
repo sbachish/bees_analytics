@@ -43,11 +43,8 @@ def bees_effectiveness(harvest):
                                round(total_harvested/len(unique_days),3) ])
     return bee_day
 
-
 #--------------------------------------------------------------------
-
 def main():
-
     print 'Loading data,,,'
     harvest = pd.read_table('harvest.csv', sep=',')
     harvest.columns = ['bee_id', 'day', 'pollen_id', 'miligrams_harvested']
