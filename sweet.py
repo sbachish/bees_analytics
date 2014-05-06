@@ -28,9 +28,7 @@ def total_sugar_per_day(harvest):
     sugar_per_day = []
     for unique_day in unique_days:
         harvest_filter_day = harvest[harvest.day==unique_day]  
-
         sugar_per_day.append( [unique_day, np.sum(harvest_filter_day.miligrams_harvested) ])
-
     return sugar_per_day
 
 
